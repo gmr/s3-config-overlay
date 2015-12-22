@@ -14,7 +14,7 @@ Given config in ``/etc/myconfig`` in a S3 bucket named ``com-mybucket`` you woul
 .. code:: bash
 
   # Start the s3-config-overlay container
-  docker run --name=app-config -v /etc/myconfig s3-config-overlay com-mybucket/my/config /etc/myconfig
+  docker run --name=app-config -v /etc/myconfig aweber/s3-config-overlay com-mybucket/my/config /etc/myconfig
 
   # Start the app that needs the config
   docker run --volumes-from=app-config my-docker-image
